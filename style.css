@@ -189,7 +189,7 @@ h2{
     h1{
         position: absolute;
         font-size: 30px;
-        width: 300px;
+        width:max-content;
         left: 2.5em; 
         top: 1.5em;            
           
@@ -263,10 +263,10 @@ h2{
 
 }
 
-@media screen and (max-width:380px){
+@media screen and (max-width:330px){
 
     h1{
-        width: 250px;
+        width: max-content;
     }
 
     h2{
