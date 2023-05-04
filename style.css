@@ -206,6 +206,7 @@ h2{
     .cabezera{
        
         font-size: 20px;
+        height: 150px;
     
     }
     
@@ -264,6 +265,9 @@ h2{
 }
 
 @media screen and (max-width:400px){
+    .cabezera{
+        height: 150px;
+    }
    h1{
     font-size: 25px;
     left: 80px;
@@ -295,6 +299,10 @@ h2{
 
 
 @media screen and (max-width:380px){
+    .cabezera{
+
+        height: 110px;
+    }
    
     h1{
         position: absolute;
@@ -314,16 +322,17 @@ h2{
    
 
     h2{
-        width: max-content;
+        width: 320px;
         top: 300px;
-        left: 30px; 
+        left: -15px; 
+       
 
     }
     #cambiador{
-        width: 200px;
+        width: 180px;
         font-size: 20px;  
         top: 370px;     
-        left: 60px; 
+        left: 40px; 
 
 
     }
