@@ -6,6 +6,7 @@ let radioSimple = document.getElementById("radio-simple")
 let radioHex = document.getElementById("radio-hex")
 let radioRgb = document.getElementById("radio-rgb")
 let seleccionado = null
+let leyenda = document.getElementById("legend")
 
 //funcion para generar colores prederterminados
 function colorSimple(){
@@ -44,7 +45,7 @@ function colorHex(){
    color.innerHTML = randomHexArray.join("")
     
 }
-
+//funcion color rgb
 function colorRgb (){
     const rgbArray = []
     
@@ -60,7 +61,7 @@ function colorRgb (){
     
 
 }
-
+// se le asigna un valor a la variable seleccionado dependiendo de que checkbox se seleccione
 radioSimple.addEventListener("click", function() {
     seleccionado = "simple"
   })
@@ -76,13 +77,16 @@ radioSimple.addEventListener("click", function() {
   cambiador.addEventListener("click", function() {
     if (seleccionado === "simple") {
       colorSimple()
+      leyenda.style.color = "blue"
     } else if (seleccionado === "hex") {
       colorHex()
+      leyenda.style.color = "blue"
     } else if (seleccionado === "rgb") {
       colorRgb()
+      leyenda.style.color = "blue"
     }
     else {
-        alert("Debes seleccionar un modo")
+        leyenda.style.color = "red"
     }
   })
   
