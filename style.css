@@ -6,7 +6,7 @@
 
 .cabezera{
     width: 100%;
-    height: 10%;
+    height: 15%;
     font-size: 1em;
     font-weight: bold;
     background: white;
@@ -17,38 +17,22 @@
     z-index: 1;
 }
 h1{
-    margin-right: 40%;
-    margin-top: 30px;
+    position: absolute;
+    top : 40px;
+    left: 250px;
    
 }
 h1 a:link, h1 a:visited,  h1 a:hover, h1 a:active{
     text-decoration: none;
     color: black;
 }
-ul{
-    display:flex;
-    margin-top: 30px;
-}
-#simple{
-    margin-right: 10px;
-}
+#colormode{
+    position: absolute;
+    text-align: center;
+    top: 30px;
+    right: 250px;
+    padding: 10px;
 
-#simple a {
-    color: red;
-}
-
-#hex a{
-    color: blue;
-
-}
-nav a {
-    
-    text-decoration: none;
-}
-
-nav a:link, nav a:visited,  nav a:hover, nav a:active{
-    text-decoration: none;
-    color: black;
 }
 
 main{
@@ -125,86 +109,137 @@ h2{
     transform: translateY(3px);
    
 }
-#cambiadorHex{
-    position: absolute;
-    width: 120px;
-    height: 40px;
-    border-style: solid;
-    border-color: black;
-    color:white;
-    outline: 0.5px solid red;
-    font-weight: bold;
-    border-radius: 5px;
-    background: transparent;
-    font-size: 15px;  
-    top: 360px;   
-    left: 590px;
-    cursor: pointer;
-}   
 
-
-
-
-#cambiadorHex:hover{
-    box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;
-    border: 3px solid #00d7c3;
-    color:   #00d7c3;
-}
-#cambiadorHex:active{
-    transform: translateY(3px);
-   
-}
- @media screen and (max-width: 1000px){
+ @media screen and (max-width: 1025px){
     .cabezera{
-        font-size: 25px;  
-    } 
+        font-size: 30px;  
+    }
 
+    h1{
+        position: absolute;
+        top : 30px;
+        left: 150px;
+       
+    }
+
+    #colormode{
+        position: absolute;
+        text-align: center;
+        top: 15px;
+        right: 150px;
+        padding: 15px;
+    }
     main{
         width: 100%;
         text-align: center;
     }
     h2{
-        left: 200px;
-        top: 400px;
+        left: 400px;
+        top: 300px;
         font-size: 25px; 
     } 
-    #cambiador, #cambiadorHex{
+    #cambiador{
         width: 15em; 
-        top: 470px;     
-        left: 260px;
+        top: 370px;     
+        left: 430px;
     }
     
 }
-
-
- @media screen and (max-width:600px){
-
-    .cabezera{
-        height: 20%;
-    
-    }
-
-    
+@media screen and (max-width: 850px){
 
     h1{
-        position: absolute;
         font-size: 30px;
-        width:max-content;
-        left: 2.5em; 
-        top: 1.5em;            
-          
+        top: 55px;
+        left: 70px;
     }
 
-    ul{
-        position: absolute;
-        font-size: 20px;  
-        top: 5em; 
-        right: 8em;                   
+    #colormode{
+        font-size: 28px;
+        top: 35px;
+        padding: 20px;
     }
 
     main{
-        width: 100%;
+        width: 600px;
+        
+    }
+
+    h2{
+        font-size: 40px;
+        left: 130px;
+        top: 420px;
+        width: max-content;
+    }
+
+    #cambiador{
+        width: 300px;
+        font-size: 30px;
+        top: 520px;
+        left: 200px;
+    }
+}
+@media screen and (max-width:600px){
+    h1{
+        font-size: 20px;
+        top: 35px;
+    }
+
+    #colormode{
+        font-size: 20px;
+        top: 25px;
+        padding: 10px;
+        right: 35px;
+    }
+
+    h2{
+        top: 300px;
+        left: 60px;
+        font-size: 30px;
+    }
+
+    #cambiador{
+        top: 400px;
+        left: 140px;
+        width: 200px;
+        font-size: 25px;
+    }
+
+
+}
+ @media screen and (max-width:480px){
+
+    .cabezera{
+       
+        font-size: 20px;
+    
+    }
+    
+    h1{
+        position: absolute;
+        font-size: 25px;
+        width:max-content;
+        left: 100px; 
+        top: 40px;            
+          
+    }
+
+    #colormode{
+        position: absolute;
         text-align: center;
+        top: 75px;
+        right: 70px;
+        padding: 15px;
+        font-size: 25px;
+    }
+
+
+ 
+
+    main{
+        position: absolute;
+        width: 80%;
+        text-align: center;
+        left: 40px;
     }
     #fondo{
         width: 100%;  
@@ -214,45 +249,71 @@ h2{
   
     
     h2{
-        width: 100%;           
+        font-size: 20px;
+        width: 350px;           
         top: 400px;     
         left: 0px;
-        padding-left: 30px;     
+        padding-left: 0;
+        text-align: center;     
     }
 
-    #cambiador, #cambiadorHex{
-        width: 15em; 
+    #cambiador{
+        width: 200px; 
         top: 470px;     
-        left: 100px;
+        left: 80px;
 
 
     }
-
-
-
 
 
 }
+
+@media screen and (max-width:400px){
+   h1{
+    font-size: 25px;
+    left: 80px;
+   }
+    #colormode{
+        right: 80px;
+        font-size: 23px;
+    }
+    main{
+        left: 20px;
+    }
+
+}
+
+
 @media screen and (max-width:380px){
-
+   
     h1{
-        top: 1em; 
-
+        position: absolute;
+        top : 25px;
+        left: 100px;
+        font-size: 20px;
     }
-    ul{
-        top: 4em;
-        left: 7em;   
 
+    #colormode{
+        position: absolute;
+        text-align: center;
+        top: 55px;
+        right: 85px;
+        padding: 15px;
+        font-size: 18px;
     }
+   
 
     h2{
-        top: 300px; 
+        width: max-content;
+        top: 300px;
+        left: 30px; 
 
     }
-    #cambiador, #cambiadorHex{
-        width: 14em;  
+    #cambiador{
+        width: 200px;
+        font-size: 20px;  
         top: 370px;     
-        left: 80px; 
+        left: 60px; 
 
 
     }
@@ -266,7 +327,18 @@ h2{
 @media screen and (max-width:330px){
 
     h1{
-        width: max-content;
+        position: absolute;
+        top : 30px;
+        left: 45px;
+       
+    }
+
+    #colormode{
+        position: absolute;
+       
+        top: 75px;
+        right: 55px;
+        padding: 15px;
     }
 
     h2{
@@ -274,7 +346,7 @@ h2{
              
     }
 
-    #cambiador, #cambiadorHex{
+    #cambiador{
         top: 420px; 
         width: 13em;  
 }

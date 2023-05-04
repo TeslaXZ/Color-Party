@@ -2,7 +2,10 @@
 let cambiador = document.getElementById("cambiador");
 let color = document.getElementById("color");
 let fondo = document.getElementById("fondo");
-let fondoHex = document.getElementById("fondoHex");
+let radioSimple = document.getElementById("radio-simple")
+let radioHex = document.getElementById("radio-hex")
+let radioRgb = document.getElementById("radio-rgb")
+let seleccionado = null
 
 //funcion para generar colores prederterminados
 function colorSimple(){
@@ -37,7 +40,51 @@ function colorHex(){
         randomHexArray.push(randomHex)
         
     }
-   fondoHex.style.background = randomHexArray.join("")
+   fondo.style.background = randomHexArray.join("")
    color.innerHTML = randomHexArray.join("")
     
 }
+
+function colorRgb (){
+    const rgbArray = []
+    
+    for (let i = 0; i < 3; i++) {
+        
+        const valorRgb = Math.round(Math.random()*255)
+        rgbArray.push(valorRgb)
+
+    }
+    let randomRgb = "rgb("+ rgbArray.join(", ") +")"
+    fondo.style.background = randomRgb
+    color.innerHTML = randomRgb
+    
+
+}
+
+radioSimple.addEventListener("click", function() {
+    seleccionado = "simple"
+  })
+  
+  radioHex.addEventListener("click", function() {
+    seleccionado = "hex"
+  })
+  
+  radioRgb.addEventListener("click", function() {
+    seleccionado = "rgb"
+  })
+  
+  cambiador.addEventListener("click", function() {
+    if (seleccionado === "simple") {
+      colorSimple()
+    } else if (seleccionado === "hex") {
+      colorHex()
+    } else if (seleccionado === "rgb") {
+      colorRgb()
+    }
+    else {
+        alert("Debes seleccionar un modo")
+    }
+  })
+  
+  
+ 

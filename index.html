@@ -17,17 +17,24 @@
     
     <div class="cabezera">
         <h1><a href="index.html">Fiesta de colores</a></h1>
-        <nav>
-            <ul>
-                <li id = "simple"><a href="index.html">Simple</a></li>
-                <li id = "hex"><a href="hex.html">Hex</a></li>
-            </ul>
-        </nav>
+
+        <fieldset id = "colormode">
+
+            <legend>Elige el modo de color</p></legend>
+    
+            <label for="Simple"><input type="radio" name="colortype" id="radio-simple" value="Simple" autocomplete="off">Simple</label>   
+            
+            <label for="Hex"><input type="radio" name="colortype" id="radio-hex" value="Hex" autocomplete="off">Hex</label>
+            
+            <label for="rgb"><input type="radio" name="colortype" id="radio-rgb" value="rgb" autocomplete="on">rgb</label>
+        
+        </fieldset>
+    
     </div>
     <div id="fondo">
         <main>
             <h2>Color de fondo : <p id = "color">Black</p></h2>  
-            <button id="cambiador" onclick="colorSimple()">Presióname</button>
+            <button id="cambiador">Presióname</button>
             <script src="script.js"></script>
         </main>
 
