@@ -6,33 +6,30 @@
 
 .cabezera{
     width: 100%;
-    height: 15%;
+    height: 15vh;
     font-size: 1em;
     font-weight: bold;
     background: white;
     position:absolute;
     display: flex;
-    justify-content:center;
+    justify-content:space-evenly;
+    align-items: center;
+    gap: 40px; 
+    flex-direction: row;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
     z-index: 1;
-    box-sizing: border-box;
+    
 }
-h1{
-    position: absolute;
-    top : 40px;
-    left: 250px;
-   
-}
+
 h1 a:link, h1 a:visited,  h1 a:hover, h1 a:active{
     text-decoration: none;
     color: black;
 }
 #colormode{
-    position: absolute;
-    text-align: center;
-    top: 30px;
-    right: 250px;
-    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px; 
 
 }
 
@@ -40,27 +37,24 @@ h1 a:link, h1 a:visited,  h1 a:hover, h1 a:active{
     color: blue;
 }
 
-main{
+#container{
     position:absolute;
-    width: 65%;
-
-       
-}
- main :not(#cambiador){
-    display: inline-block
-}
-
-#fondo{
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
     background: green;
     width: 100%;
-    height: 100%; 
-    position: absolute;
-
+    height: 100vh;
+    gap: 20px;  
 }
 
 h2{
-    position: absolute;
+    
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
     width: max-content;
     height: 50px;
     border-radius: 5px;
@@ -68,19 +62,10 @@ h2{
     font-size: 30px; 
     font-weight: bold;
     background: black;
-    text-align: left;
-    box-sizing: border-box;
-    padding-top: 20px;
-    padding-left: 15px; 
-    top: 300px; 
-    left: 470px;
-
-
-
+ 
 }
 
 #cambiador{
-    position: absolute;
     width: 120px;
     height: 40px;
     border-style: solid;
@@ -91,8 +76,6 @@ h2{
     border-radius: 5px;
     background: transparent;
     font-size: 15px;  
-    top: 360px;   
-    left: 590px;
     cursor: pointer;
 }
 #cambiador:hover{
@@ -105,290 +88,19 @@ h2{
    
 }
 
- @media screen and (max-width: 1025px){
+
+@media(max-width:480px){
     .cabezera{
-        font-size: 30px;  
-    }
-
-    h1{
-        position: absolute;
-        top : 30px;
-        left: 150px;
-       
-    }
-
-    #colormode{
-        position: absolute;
-        text-align: center;
-        top: 15px;
-        right: 150px;
-        padding: 15px;
-    }
-    main{
-        width: 100%;
-        text-align: center;
-    }
-    h2{
-        left: 400px;
-        top: 300px;
-        font-size: 25px; 
-    } 
-    #cambiador{
-        width: 15em; 
-        top: 370px;     
-        left: 430px;
-    }
-    
-}
-@media screen and (max-width: 850px){
-
-    h1{
-        font-size: 30px;
-        top: 55px;
-        left: 70px;
-    }
-
-    #colormode{
-        font-size: 28px;
-        top: 35px;
-        padding: 20px;
-    }
-
-    main{
-        width: 600px;
-        
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        gap: 0px;
     }
 
     h2{
-        font-size: 40px;
-        left: 130px;
-        top: 420px;
-        width: max-content;
-    }
-
-    #cambiador{
-        width: 300px;
-        font-size: 30px;
-        top: 520px;
-        left: 200px;
-    }
-}
-@media screen and (max-width:600px){
-    h1{
         font-size: 20px;
-        top: 35px;
     }
-
-    #colormode{
-        font-size: 20px;
-        top: 25px;
-        padding: 10px;
-        right: 35px;
-    }
-
-    h2{
-        top: 300px;
-        left: 60px;
-        font-size: 30px;
-    }
-
-    #cambiador{
-        top: 400px;
-        left: 140px;
-        width: 200px;
-        font-size: 25px;
-    }
-
 
 }
- @media screen and (max-width:480px){
-
-    .cabezera{
-       
-        font-size: 20px;
-        height: 150px;
-    
-    }
-    
-    h1{
-        position: absolute;
-        font-size: 25px;
-        width:max-content;
-        left: 100px; 
-        top: 40px;            
-          
-    }
-
-    #colormode{
-        position: absolute;
-        text-align: center;
-        top: 75px;
-        right: 70px;
-        padding: 15px;
-        font-size: 25px;
-    }
-
-
- 
-
-    main{
-        position: absolute;
-        width: 80%;
-        text-align: center;
-        left: 40px;
-    }
-    #fondo{
-        width: 100%;  
-        height: 100%;
-
-    }
+   
   
-    
-    h2{
-        font-size: 20px;
-        width: 350px;           
-        top: 400px;     
-        left: 0px;
-        padding-left: 0;
-        text-align: center;     
-    }
-
-    #cambiador{
-        width: 200px; 
-        top: 470px;     
-        left: 80px;
-
-
-    }
-
-
-}
-
-@media screen and (max-width:400px){
-    .cabezera{
-        height: 150px;
-    }
-   h1{
-    font-size: 25px;
-    left: 80px;
-   }
-    #colormode{
-        right: 80px;
-        font-size: 23px;
-    }
-    main{
-        position: absolute;
-        width: 80%;
-        text-align: center;
-        left: 40px;
-    }
-    #fondo{
-        width: 100%;  
-        height: 100%;
-
-    }
-    h2{
-        font-size: 20px;
-        width: 350px;           
-        top: 400px;     
-        left: -10px;
-        padding-left: 0;
-        text-align: center;     
-    }
-}
-
-
-@media screen and (max-width:380px){
-    .cabezera{
-
-        height: 110px;
-    }
-   
-    h1{
-        position: absolute;
-        top : 25px;
-        left: 100px;
-        font-size: 20px;
-    }
-
-    #colormode{
-        position: absolute;
-        text-align: center;
-        top: 55px;
-        right: 85px;
-        padding: 15px;
-        font-size: 18px;
-    }
-   
-
-    h2{
-        width: 320px;
-        top: 300px;
-        left: -15px; 
-       
-
-    }
-    #cambiador{
-        width: 180px;
-        font-size: 20px;  
-        top: 370px;     
-        left: 40px; 
-
-
-    }
-
-
-
-
-
-}
-
-@media screen and (max-width:340px){
-    .cabezera{
-
-        height: 110px;
-    }
-    h1{
-        position: absolute;
-        top : 25px;
-        left: 85px;
-       
-    }
-
-    #colormode{
-        position: absolute;
-       
-        top: 55px;
-        right: 60px;
-        padding: 15px;
-    }
-    
-    main{
-        position: absolute;
-        width: 80%;
-        text-align: center;
-        left: 40px;
-    }
-    #fondo{
-        width: 100%;  
-        height: 100%;
-
-    }
-    h2{
-        font-size: 18px;
-        width: 300px;           
-        top: 400px;     
-        left: -10px;
-        padding-left: 0;
-        text-align: center;     
-    }
-
-
-    #cambiador{
-        top: 480px;
-        left: 50px; 
-        width: 170px;  
-}
-}
-   
-

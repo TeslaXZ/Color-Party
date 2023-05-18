@@ -1,7 +1,7 @@
 //declaro las variables del button, p, y background 
 let cambiador = document.getElementById("cambiador");
 let color = document.getElementById("color");
-let fondo = document.getElementById("fondo");
+let fondo = document.getElementById("container");
 let radioSimple = document.getElementById("radio-simple")
 let radioHex = document.getElementById("radio-hex")
 let radioRgb = document.getElementById("radio-rgb")
